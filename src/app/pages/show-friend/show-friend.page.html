@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Friend</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+  [(ngModel)]="searchTerm"
+  (ionChange)="setFilteredItems()"
+  #mySearchbar
+></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let orang of user2">
+      <ion-avatar>
+        <ion-img src="{{orang.imageUrl}}"></ion-img>
+      </ion-avatar>
+      <ion-label>{{orang.nDepan}} - {{orang.nBelakang}}</ion-label>
+      <ion-buttons>
+          <ion-button (click)="presentAlert(orang)"><ion-icon name="close-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

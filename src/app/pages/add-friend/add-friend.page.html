@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Show User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+  [(ngModel)]="searchTerm"
+  (ionChange)="setFilteredItems()"
+  #mySearchbar
+></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let orang of user">
+      <ion-avatar>
+        <ion-img src="{{orang.imageUrl}}"></ion-img>
+      </ion-avatar>
+      <ion-label>{{orang.nDepan}}  {{orang.nBelakang}}</ion-label>
+      <ion-button (click)="addFriend(orang)"><ion-icon name="add"></ion-icon></ion-button>
+    </ion-item>
+    <ion-item *ngIf="userAll == null">
+      <ion-label>No More Friends to add</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

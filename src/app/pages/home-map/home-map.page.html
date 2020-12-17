@@ -1,0 +1,11 @@
+<ion-content>
+  <ion-button color="primary" expand="full" (click)="showCurrentLoc()">Current Location</ion-button>
+  <div #map id="map"></div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="locationClick()">
+      <ion-icon name="locate"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+

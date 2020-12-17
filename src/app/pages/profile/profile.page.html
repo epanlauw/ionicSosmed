@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="photo">
+    <ion-card-title>
+      <ion-img class="profile-picture" [src]="photo"></ion-img>
+    </ion-card-title>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text>Nama Depan :</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{namaDepan}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Nama Belakang :</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{namaBelakang}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Email :</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>{{userEmail}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>NIM :</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>00000019999</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="ion-text-center">Kesan Pesan di Cross Platform:</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="ion-text-center">Gabut karena online sih tapi yah mau gimana lagi wkwkwkwkwkw</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="logout()" color="primary" class="ion-text-center" expand="full">Log Out</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
